@@ -1,23 +1,23 @@
 # 🚀 Project 93 – Rate Limited API | System Design Level | Full Stack DevOps
 
-[Java 17](https://img.shields.io/badge/Java-17-E76F00?logo=openjdk&logoColor=white)
-[Spring Boot 3.2.5](https://img.shields.io/badge/Spring%20Boot-3.2.5-6DB33F?logo=springboot&logoColor=white)
-[Bucket4j](https://img.shields.io/badge/Bucket4j-8.7.0-00BFFF?logo=java&logoColor=white)
-[Rate Limiting](https://img.shields.io/badge/Rate%20Limiting-Enabled-FF0000?logo=awswaf&logoColor=white)
-[429 Handling](https://img.shields.io/badge/429-Too%20Many%20Requests-FF0000)
-[JUnit 5](https://img.shields.io/badge/JUnit-5-25A162?logo=junit5&logoColor=white)
-[Mockito](https://img.shields.io/badge/Mockito-Ready-00BFFF)
-[Redis Ready](https://img.shields.io/badge/Redis-Ready-DC382D?logo=redis&logoColor=white)
-[Interceptor](https://img.shields.io/badge/Interceptor-Pattern-FFA500?logo=spring&logoColor=white)
-[Maven](https://img.shields.io/badge/Maven-3.9+-C71A36?logo=apachemaven&logoColor=white)
-[Tomcat](https://img.shields.io/badge/Apache%20Tomcat-10.1.20-D4AF00?logo=apachetomcat&logoColor=white)
-[Port](https://img.shields.io/badge/Port-8095-00BFFF)
-[Status](https://img.shields.io/badge/Status-Rate%20Limit%20Live-brightgreen)
-[Tier 10](https://img.shields.io/badge/Tier%2010-System%20Design%20Level-blueviolet)
+![Java 17](https://img.shields.io/badge/Java-17-E76F00?logo=openjdk&logoColor=white)
+![Spring Boot 3.2.5](https://img.shields.io/badge/Spring%20Boot-3.2.5-6DB33F?logo=springboot&logoColor=white)
+![Bucket4j](https://img.shields.io/badge/Bucket4j-8.7.0-00BFFF?logo=java&logoColor=white)
+![Rate Limiting](https://img.shields.io/badge/Rate%20Limiting-Enabled-FF0000?logo=awswaf&logoColor=white)
+![429 Handling](https://img.shields.io/badge/429-Too%20Many%20Requests-FF0000)
+![JUnit 5](https://img.shields.io/badge/JUnit-5-25A162?logo=junit5&logoColor=white)
+![Mockito](https://img.shields.io/badge/Mockito-Ready-00BFFF)
+![Redis Ready](https://img.shields.io/badge/Redis-Ready-DC382D?logo=redis&logoColor=white)
+![Interceptor](https://img.shields.io/badge/Interceptor-Pattern-FFA500?logo=spring&logoColor=white)
+![Maven](https://img.shields.io/badge/Maven-3.9+-C71A36?logo=apachemaven&logoColor=white)
+![Tomcat](https://img.shields.io/badge/Apache%20Tomcat-10.1.20-D4AF00?logo=apachetomcat&logoColor=white)
+![Port](https://img.shields.io/badge/Port-8095-00BFFF)
+![Status](https://img.shields.io/badge/Status-Rate%20Limit%20Live-brightgreen)
+![Tier 10](https://img.shields.io/badge/Tier%2010-System%20Design%20Level-blueviolet)
 
 **Live URL:** https://nine3-rate-limited-api.onrender.com/
 
-[[Live](https://img.shields.io/badge/Live-Render-brightgreen?style=for-the-badge&logo=render)](https://nine3-rate-limited-api.onrender.com)
+[![Live](https://img.shields.io/badge/Live-Render-brightgreen?style=for-the-badge&logo=render)](https://nine3-rate-limited-api.onrender.com)
 
 Project 93 - Part of Java 102 Projects Challenge - System Design Level Tier 10 START
 ---
@@ -141,37 +141,37 @@ This is Project 93 of Tier 10 - START - After Blue-Green Deploy (92), now real S
 # 📸 Screenshots - 7 Demos - Rate Limiting Verified
 
 ### Demo 1 – Browser - GET / - Home Live JSON - Rate Limited API Tier 10 Start
-[Demo1 Home](screenshots/demo1.png)
+![Demo1 Home](screenshots/demo1.png)
 
 *GET https://nine3-rate-limited-api.onrender.com/ - Browser - 200 OK - Returns {"project":"93-rate-limited-api","status":"Live - Rate Limited API","tier":"10 - System Design Level","owner":"Raviteja","endpoints":["/api/data (5 req/min)","/api/limited (2 req/min)"]} - Proof of Home Live - Portfolio ready - Tier 10 START 93/102 - Fixed Whitelabel 404 with HomeController*
 
 ### Demo 2 – Browser - GET /api/data - Success 200 OK - 5 requests per minute
-[Demo2 Data](screenshots/demo2.png)
+![Demo2 Data](screenshots/demo2.png)
 
 *GET https://nine3-rate-limited-api.onrender.com/api/data - Browser - 200 OK - Returns "Success - You have 5 requests per minute" - First 5 requests allowed - Token Bucket has tokens - Proof of Rate Limiting Working - Live on Render*
 
 ### Demo 3 – Browser - GET /api/limited - 2 requests per minute - Different limit per endpoint
-[Demo3 Limited](screenshots/demo3.png)
+![Demo3 Limited](screenshots/demo3.png)
 
 *GET https://nine3-rate-limited-api.onrender.com/api/limited - Browser - 200 OK - Returns "This API allows only 2 requests per minute" - Proof of Custom @RateLimit annotation - requests=2 vs requests=5 - Interview ready*
 
 ### Demo 4 – Browser - GET /api/data 6th request - 429 Too Many Requests - Blocking Works
-[Demo4 429](screenshots/demo4.png)
+![Demo4 429](screenshots/demo4.png)
 
 *GET http://localhost:8095/api/data - 6th Refresh - 429 Too Many Requests - Returns "429 Too Many Requests - Try after 1 minute" - Proof of Blocking - Bucket empty - 5 allowed per minute - System Design core - Real API abuse protection*
 
 ### Demo 5 – Eclipse JUnit - Green Bar - 2/2 Tests Passed - RateLimitServiceTest
-[Demo5 JUnit](screenshots/demo5.png)
+![Demo5 JUnit](screenshots/demo5.png)
 
 *Eclipse JUnit - Runs: 2/2 - Errors: 0 - Failures: 0 - Green Bar - testAllow5Requests ✓ - testBlock6thRequest ✓ - Proof of Tier 10 Testing Goal - JUnit + Mockito*
 
 ### Demo 6 – Render Live - Deploy succeeded - 1m38s - Your service is live
-[Demo6 Deploy](screenshots/demo6.png)
+![Demo6 Deploy](screenshots/demo6.png)
 
 *Render Dashboard - Deploy succeeded | Live - Duration 1m38s - Source f33ed84 - Tomcat started on port 10000 - Started Application in 37.498s - Your service is live - https://nine3-rate-limited-api.onrender.com - Proof of Live Deployment*
 
 ### Demo 7 – Eclipse Console - Started Application in 4.806s - Tomcat 8095 - Bucket4j Ready
-[Demo7 Console](screenshots/demo7.png)
+![Demo7 Console](screenshots/demo7.png)
 
 *Eclipse Console - :: Spring Boot :: v3.2.5 - Tomcat initialized with port 8095 - WebApplicationContext initialization completed - Tomcat started on port 8095 - Started Application in 4.806 seconds - Proof of Local Run - No Lombok - Bucket4j Ready*
 
@@ -354,6 +354,6 @@ If you found this project helpful, consider giving it a ⭐ Star on GitHub.
 
 **Single Repo:** [93-rate-limited-api](https://github.com/raviteja-dev950/93-rate-limited-api)
 
-**Live URL:** https://nine3-rate-limited-api.onrender.com/
+**Live URL:**https://nine3-rate-limited-api.onrender.com/ 
 
 **Tier 10:** 93 Rate Limited API + 94 URL Shortener Scale + 95 Chat WebSockets + 96 Video Streaming + 97 Search Elastic + 98 Recommendation + 99 Multi-tenant SaaS + 100 Audit Log + 101 SaaS Idea + 102 Capstone OSS = **TIER 10 FINAL 10 PROJECTS**
