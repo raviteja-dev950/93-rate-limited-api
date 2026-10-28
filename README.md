@@ -137,24 +137,45 @@ This is Project 93 of Tier 10 - START - After Blue-Green Deploy (92), now real S
 
 ---
 
-# 📸 Screenshots - 3 Demos - Rate Limiting Verified
 
-### Demo 1 – Browser - GET /api/data - Success 200 OK - You have 5 requests per minute - Tier 10 Start
-[Demo1 Success](screenshots/demo1.png)
+# 📸 Screenshots - 7 Demos - Rate Limiting Verified
 
-*GET http://localhost:8095/api/data - Browser - 200 OK - Returns "Success - You have 5 requests per minute" - First 5 requests allowed - Token Bucket has tokens - Proof of Rate Limiting Working - Portfolio ready - Tier 10 START 93/102*
+### Demo 1 – Browser - GET / - Home Live JSON - Rate Limited API Tier 10 Start
+[Demo1 Home](screenshots/demo1.png)
 
-### Demo 2 – Browser - GET /api/data 6th request - 429 Too Many Requests - Try after 1 minute - Blocking Working
-[Demo2 429](screenshots/demo2.png)
+*GET https://nine3-rate-limited-api.onrender.com/ - Browser - 200 OK - Returns {"project":"93-rate-limited-api","status":"Live - Rate Limited API","tier":"10 - System Design Level","owner":"Raviteja","endpoints":["/api/data (5 req/min)","/api/limited (2 req/min)"]} - Proof of Home Live - Portfolio ready - Tier 10 START 93/102 - Fixed Whitelabel 404 with HomeController*
 
-*GET http://localhost:8095/api/data - 6th Refresh - Browser - 429 Too Many Requests - Returns "429 Too Many Requests - Try after 1 minute" - Proof of Rate Limit Blocking - Bucket empty - 5 allowed per minute logic working - System Design core - Interview ready - Same as real API abuse protection*
+### Demo 2 – Browser - GET /api/data - Success 200 OK - 5 requests per minute
+[Demo2 Data](screenshots/demo2.png)
 
-### Demo 3 – Eclipse JUnit - Green Bar - 2/2 Tests Passed - 0 Errors 0 Failures - RateLimitServiceTest - Tier 10 JUnit Goal
-[Demo3 JUnit](screenshots/demo3.png)
+*GET https://nine3-rate-limited-api.onrender.com/api/data - Browser - 200 OK - Returns "Success - You have 5 requests per minute" - First 5 requests allowed - Token Bucket has tokens - Proof of Rate Limiting Working - Live on Render*
 
-*Eclipse IDE - JUnit Tab - Finished after 0.81 seconds - Runs: 2/2 - Errors: 0 - Failures: 0 - Green Bar - RateLimitServiceTest [Runner: JUnit 5] (0.180s) - testBlock6thRequest (0.168s) ✓ - testAllow5Requests (0.009s) ✓ - Proof of Testing - Tier 10 GitHub Goal JUnit + Mockito - Good pay package ready*
+### Demo 3 – Browser - GET /api/limited - 2 requests per minute - Different limit per endpoint
+[Demo3 Limited](screenshots/demo3.png)
 
----
+*GET https://nine3-rate-limited-api.onrender.com/api/limited - Browser - 200 OK - Returns "This API allows only 2 requests per minute" - Proof of Custom @RateLimit annotation - requests=2 vs requests=5 - Interview ready*
+
+### Demo 4 – Browser - GET /api/data 6th request - 429 Too Many Requests - Blocking Works
+[Demo4 429](screenshots/demo4.png)
+
+*GET http://localhost:8095/api/data - 6th Refresh - 429 Too Many Requests - Returns "429 Too Many Requests - Try after 1 minute" - Proof of Blocking - Bucket empty - 5 allowed per minute - System Design core - Real API abuse protection*
+
+### Demo 5 – Eclipse JUnit - Green Bar - 2/2 Tests Passed - RateLimitServiceTest
+[Demo5 JUnit](screenshots/demo5.png)
+
+*Eclipse JUnit - Runs: 2/2 - Errors: 0 - Failures: 0 - Green Bar - testAllow5Requests ✓ - testBlock6thRequest ✓ - Proof of Tier 10 Testing Goal - JUnit + Mockito*
+
+### Demo 6 – Render Live - Deploy succeeded - 1m38s - Your service is live
+[Demo6 Deploy](screenshots/demo6.png)
+
+*Render Dashboard - Deploy succeeded | Live - Duration 1m38s - Source f33ed84 - Tomcat started on port 10000 - Started Application in 37.498s - Your service is live - https://nine3-rate-limited-api.onrender.com - Proof of Live Deployment*
+
+### Demo 7 – Eclipse Console - Started Application in 4.806s - Tomcat 8095 - Bucket4j Ready
+[Demo7 Console](screenshots/demo7.png)
+
+*Eclipse Console - :: Spring Boot :: v3.2.5 - Tomcat initialized with port 8095 - WebApplicationContext initialization completed - Tomcat started on port 8095 - Started Application in 4.806 seconds - Proof of Local Run - No Lombok - Bucket4j Ready*
+
+
 
 # ▶ How to Run - Rate Limited Repo
 
